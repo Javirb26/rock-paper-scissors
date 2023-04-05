@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: grey;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.main {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: center;
+    border: 1px solid red;
+    height: 100vh;
+}
+
+h1 {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#result {
+    grid-area: text;
+    color: rgba(255, 255, 255, 0.9);
+    align-items: center;
+    border: 1px solid red;
+}
+
+.fa-solid {
+    margin-top: 2%;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 40px;
+}
+
+.rock-i {
+    transform: rotate(90deg);
+}
+
+
+/* Define the animation */
+@keyframes jump {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-20px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+  
+  /* Apply the animation to the element on hover */
+  .item:hover {
+    animation: jump 0.9s ease-in-out infinite;
+  }
+  
