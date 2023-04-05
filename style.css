@@ -1,0 +1,107 @@
+/* universal reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*  */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* border: 1px solid red; */
+    background-color: black;
+}
+
+/* positions h1 to top of viewport, center aligns test */
+.title {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+/* display set to flex in order to move results under icons */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* grid container for icons  */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 600px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* styles for icon */
+.item {
+    text-align: center;
+    padding-bottom: 25%;
+}
+
+/* remove default button styles */
+button {
+    appearance: none;
+    -webkit-appearance: none; /* for Safari */
+    border: none; /* optional */
+    outline: none; /* optional */
+    background-color: black;
+}
+
+/* sets color of h1 to white */
+h1 {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* rotates the rock icon 90deg to the right */
+.rock-i {
+    transform: rotate(90deg);
+}
+
+/* icon size, color and margins styles */
+.fa-solid {
+    margin-top: 25%;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 40px;
+}
+
+/* positions results of user and computer selection under icons*/
+#result {
+    margin-top: 3%;
+    color: rgba(255, 255, 255, 0.9);
+    /* border: 1px solid red; */
+    max-width: 300px;
+    text-align: center;
+}
+
+/* positions footer on the bottom of the viewport */
+.footer {
+    position: fixed;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+    
+    /* Define the jump animation */
+@keyframes jump {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-20px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+  
+  /* Apply the animation to the element on hover */
+  .item:hover {
+    animation: jump 0.9s ease-in-out infinite;
+    border-bottom: 2px dotted white;
+    border-radius: 20%;
+  }

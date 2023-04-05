@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/36f817b6af.js" crossorigin="anonymous"></script>
+    <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+    <!-- main content -->
+    <div class="main">
+
+        <!-- header/title of page -->
+        <div class="title">
+            <h1>stone | tree  | metal</h1>
+        </div>
+        
+        <!-- container of the game -->
+        <div class="container">
+
+            <!-- grid container for icon/user selection -->
+            <div class="grid-container">
+
+                <!-- rock selection -->
+                <div class="rock item">
+                    <button onclick="playGame('rock')">
+                        <h1>Rock</h1>
+                        <i class="fa-solid fa-hand-back-fist rock-i"></i>
+                    </button>
+                </div>
+
+                <!-- paper selection -->
+                <div class="paper item">
+                    <button onclick="playGame('paper')">
+                        <h1>Paper</h1>
+                        <i class="fa-solid fa-hand paper-i"></i>
+                    </button>
+                </div>
+
+                <!-- scissor selection -->
+                <div class="scissors item">
+                    <button onclick="playGame('scissors')">
+                        <h1>Scissors</h1>
+                        <i class="fa-solid fa-hand-scissors scissors-i"></i>
+                    </button>
+                </div>
+                
+            </div>
+
+            <!-- js will write down result of user & computer options below-->
+            <div id="result"></div> 
+
+        </div>
+
+        <!-- footer/hidden cheat allows user to select bomb and always win  -->
+        <div class="footer">
+            <button onclick="playGame('bomb')">
+                <h1>fuel + fire + o2</h1>
+            </button>
+        </div>
+
+    </div>
+    
+<script src="main.js"></script>
+</body>
+</html>
